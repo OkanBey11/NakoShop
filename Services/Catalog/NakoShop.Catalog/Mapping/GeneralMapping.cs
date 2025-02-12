@@ -24,7 +24,7 @@ namespace NakoShop.Catalog.Mapping
             CreateMap<ProductDetail, ResultProductDetailDto>().ReverseMap();
             CreateMap<ProductDetail, CreateProductDetailDto>().ReverseMap();
             CreateMap<ProductDetail, UpdateProductDetailDto>().ReverseMap();
-            CreateMap<ProductDetail, GetByIdProductDto>().ReverseMap();
+            CreateMap<ProductDetail, GetByIdProductDetailDto>().ReverseMap();
 
             CreateMap<ProductImage, ResultProductImageDto>().ReverseMap();
             CreateMap<ProductImage, CreateProductImageDto>().ReverseMap();
