@@ -1,0 +1,6 @@
+@NakoShop.Discount_HostAddress = http://localhost:5184
+
+GET {{NakoShop.Discount_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
