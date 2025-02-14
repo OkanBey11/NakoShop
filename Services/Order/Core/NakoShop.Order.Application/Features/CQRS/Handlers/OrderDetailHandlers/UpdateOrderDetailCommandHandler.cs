@@ -1,19 +1,14 @@
 ﻿using NakoShop.Order.Application.Features.CQRS.Commands.OrderDetailCommands;
 using NakoShop.Order.Application.Interfaces;
 using NakoShop.Order.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NakoShop.Order.Application.Features.CQRS.Handlers.OrderDetailHandlers
 {
-    public class UpdateOrderDetailQueryHandler
+    public class UpdateOrderDetailCommandHandler
     {
         private readonly IRepository<OrderDetail> _repository;
 
-        public UpdateOrderDetailQueryHandler(IRepository<OrderDetail> repository)
+        public UpdateOrderDetailCommandHandler(IRepository<OrderDetail> repository)
         {
             _repository = repository;
         }

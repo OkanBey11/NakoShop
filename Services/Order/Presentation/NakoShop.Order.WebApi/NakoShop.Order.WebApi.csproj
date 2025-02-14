@@ -11,7 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\..\Core\NakoShop.Order.Application\NakoShop.Order.Application.csproj" />
+    <ProjectReference Include="..\..\Core\NakoShop.Order.Domain\NakoShop.Order.Domain.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\NakoShop.Order.Persistence\NakoShop.Order.Persistence.csproj" />
   </ItemGroup>
 
 </Project>
