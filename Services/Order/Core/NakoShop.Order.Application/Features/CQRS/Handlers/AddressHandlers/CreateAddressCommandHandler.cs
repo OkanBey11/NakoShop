@@ -6,16 +6,16 @@ namespace NakoShop.Order.Application.Features.CQRS.Handlers.AddressHandlers
 {
     public class CreateAddressCommandHandler
     {
-        private readonly IRepository<Adddress> _repository;
+        private readonly IRepository<Address> _repository;
 
-        public CreateAddressCommandHandler(IRepository<Adddress> repository)
+        public CreateAddressCommandHandler(IRepository<Address> repository)
         {
             _repository = repository;
         }
 
         public async Task Handle(CreateAddressCommand createAddressCommand)
         {
-            await _repository.CreateAsync(new Adddress
+            await _repository.CreateAsync(new Address
             {
                 City = createAddressCommand.City,
                 Detail = createAddressCommand.Detail,

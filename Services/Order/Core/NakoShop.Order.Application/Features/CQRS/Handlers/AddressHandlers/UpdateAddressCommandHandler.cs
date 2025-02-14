@@ -6,9 +6,9 @@ namespace NakoShop.Order.Application.Features.CQRS.Handlers.AddressHandlers
 {
     public class UpdateAddressCommandHandler
     {
-        private readonly IRepository<Adddress> _adddressRepository;
+        private readonly IRepository<Address> _adddressRepository;
 
-        public UpdateAddressCommandHandler(IRepository<Adddress> adddressRepository)
+        public UpdateAddressCommandHandler(IRepository<Address> adddressRepository)
         {
             _adddressRepository = adddressRepository;
         }

@@ -6,9 +6,9 @@ namespace NakoShop.Order.Application.Features.CQRS.Handlers.AddressHandlers
 {
     public class RemoveAddressCommandHandler
     {
-        private readonly IRepository<Adddress> _adddressRepository;
+        private readonly IRepository<Address> _adddressRepository;
 
-        public RemoveAddressCommandHandler(IRepository<Adddress> adddressRepository)
+        public RemoveAddressCommandHandler(IRepository<Address> adddressRepository)
         {
             _adddressRepository = adddressRepository;
         }

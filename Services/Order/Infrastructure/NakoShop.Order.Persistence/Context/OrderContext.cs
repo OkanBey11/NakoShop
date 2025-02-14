@@ -10,7 +10,7 @@ namespace NakoShop.Order.Persistence.Context
             optionsBuilder.UseSqlServer("Server=MYLORDNAKO\\SQLEXPRESS;initial Catalog=MultiShopOrderDb;intergrated Security=true;TrustServerCertificate=True;");
 
         }
-        public DbSet<Adddress> Adddresses {  get; set; }
+        public DbSet<Address> Adddresses {  get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }
         public DbSet<Ordering> Orderings { get; set; }
     }
