@@ -1,0 +1,6 @@
+@NakoShop.Order.WebApi_HostAddress = http://localhost:5032
+
+GET {{NakoShop.Order.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
