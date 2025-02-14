@@ -1,11 +1,6 @@
 ﻿using NakoShop.Order.Application.Features.CQRS.Commands.AddressCommands;
 using NakoShop.Order.Application.Interfaces;
 using NakoShop.Order.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NakoShop.Order.Application.Features.CQRS.Handlers.AddressHandlers
 {

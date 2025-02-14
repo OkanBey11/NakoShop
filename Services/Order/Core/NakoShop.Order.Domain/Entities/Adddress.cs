@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace NakoShop.Order.Domain.Entities
+﻿namespace NakoShop.Order.Domain.Entities
 {
     public class Adddress
     {
