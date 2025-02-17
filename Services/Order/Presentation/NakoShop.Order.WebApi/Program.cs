@@ -2,11 +2,14 @@ using NakoShop.Order.Application.Features.CQRS.Handlers.AddressHandlers;
 using NakoShop.Order.Application.Features.CQRS.Handlers.OrderDetailHandlers;
 using NakoShop.Order.Application.Interfaces;
 using NakoShop.Order.Application.Services;
+using NakoShop.Order.Persistence.Context;
 using NakoShop.Order.Persistence.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+builder.Services.AddDbContext<OrderContext>();
 
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 builder.Services.AddApplicationService(builder.Configuration);

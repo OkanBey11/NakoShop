@@ -7,7 +7,7 @@ namespace NakoShop.Order.Persistence.Context
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=MYLORDNAKO\\SQLEXPRESS;initial Catalog=MultiShopOrderDb;intergrated Security=true;TrustServerCertificate=True;");
+            optionsBuilder.UseSqlServer("Server=localhost,1433\\SQLEXPRESS;initial Catalog=NakoShopOrderDb;User=sa;Password=123456789aA*;TrustServerCertificate=True;");
 
         }
         public DbSet<Address> Adddresses {  get; set; }
