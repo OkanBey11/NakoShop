@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using NakoShop.Catalog.Dtos.CategoryDtos;
 using NakoShop.Catalog.Entities;
@@ -6,6 +7,7 @@ using NakoShop.Catalog.Services.CategoryServices;
 
 namespace NakoShop.Catalog.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class CategoriesController : ControllerBase
