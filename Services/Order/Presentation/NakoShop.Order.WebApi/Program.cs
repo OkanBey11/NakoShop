@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using NakoShop.Order.Application.Features.CQRS.Handlers.AddressHandlers;
 using NakoShop.Order.Application.Features.CQRS.Handlers.OrderDetailHandlers;
 using NakoShop.Order.Application.Interfaces;
@@ -6,6 +7,14 @@ using NakoShop.Order.Persistence.Context;
 using NakoShop.Order.Persistence.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(opt =>
+{
+    opt.Authority = builder.Configuration["IdentityServerUrl"];
+    opt.Audience = "ResourceOrder";
+    opt.RequireHttpsMetadata = false;
+
+});
 
 // Add services to the container.
 
@@ -46,6 +55,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

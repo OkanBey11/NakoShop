@@ -43,7 +43,7 @@ namespace NakoShop.IdentityServer
                 ClientName="Nako Shop Visitor User",
                 AllowedGrantTypes=GrantTypes.ClientCredentials,
                 ClientSecrets={new Secret("nakoshopsecret".Sha256())},
-                AllowedScopes={"CatalogReadPermission"}
+                AllowedScopes={"CatalogReadPermission", "DiscountFullPermission" }
             },
 
             //Manager

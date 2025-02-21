@@ -1,10 +1,12 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using NakoShop.Order.Application.Features.Mediator.Commands.OrderingCommands;
 using NakoShop.Order.Application.Features.Mediator.Queries.OrderingQueries;
 
 namespace NakoShop.Order.WebApi.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class OrderingController : ControllerBase
