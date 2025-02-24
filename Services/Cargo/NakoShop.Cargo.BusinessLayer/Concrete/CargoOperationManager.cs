@@ -4,11 +4,11 @@ using NakoShop.Cargo.EntityLayer.Concrete;
 
 namespace NakoShop.Cargo.BusinessLayer.Concrete
 {
-    public class CargoOperationService : ICargoOperationsService
+    public class CargoOperationManager : ICargoOperationsService
     {
         private readonly ICargoOperationDal _cargoOperationDal;
 
-        public CargoOperationService(ICargoOperationDal cargoOperationDal)
+        public CargoOperationManager(ICargoOperationDal cargoOperationDal)
         {
             _cargoOperationDal = cargoOperationDal;
         }
