@@ -15,6 +15,7 @@ namespace NakoShop.IdentityServer
             new ApiResource("ResourceDiscount"){Scopes={"DiscountFullPermission"} },
             new ApiResource("ResourceOrder"){Scopes={"OrderFullPermission"}},
             new ApiResource("ResourceCargo"){Scopes={"CargoFullPermission"}},
+            new ApiResource("ResourceBasket"){Scopes={"BasketFullPermission"}},
             new ApiResource(IdentityServerConstants.LocalApi.ScopeName)
         };
 
@@ -32,6 +33,7 @@ namespace NakoShop.IdentityServer
             new ApiScope("DiscountFullPermission", "Full authority for discount operations"),
             new ApiScope("OrderFullPermission", "Full authority for order operations"),
             new ApiScope("CargoFullPermission", "Full authority for cargo operations"),
+            new ApiScope("BasketFullPermission", "Full authority for basket operations"),
             new ApiScope(IdentityServerConstants.LocalApi.ScopeName)
         };
 
@@ -53,7 +55,7 @@ namespace NakoShop.IdentityServer
             {
                 ClientId="NakoShopManagerId",
                 ClientName="Nako Shop Manager User",
-                AllowedGrantTypes=GrantTypes.ClientCredentials,
+                AllowedGrantTypes=GrantTypes.ResourceOwnerPassword,
                 ClientSecrets={new Secret("nakoshopsecret".Sha256())},
                 AllowedScopes={ "CatalogReadPermission", "CatalogFullPermission" }
             },
@@ -63,10 +65,11 @@ namespace NakoShop.IdentityServer
             {
                 ClientId="NakoShopAdminId",
                 ClientName="Nako Shop Admin User",
-                AllowedGrantTypes=GrantTypes.ClientCredentials,
+                AllowedGrantTypes=GrantTypes.ResourceOwnerPassword,
                 ClientSecrets={new Secret("nakoshopsecret".Sha256())},
                 AllowedScopes={ "CatalogFullPermission", "CatalogReadPermission",
                 "DiscountFullPermission", "OrderFullPermission","CargoFullPermission",
+                "BasketFullPermission",
                 IdentityServerConstants.LocalApi.ScopeName,
                 IdentityServerConstants.StandardScopes.Email,
                 IdentityServerConstants.StandardScopes.OpenId,
